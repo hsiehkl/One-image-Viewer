@@ -37,6 +37,9 @@
                                         <state key="normal" title="Pick an Image">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="eif-Rh-L6a" kind="show" id="JZB-LF-8nc"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.97647058823529409" green="0.87450980392156863" blue="0.090196078431372548" alpha="1" colorSpace="calibratedRGB"/>
@@ -65,11 +68,28 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="butoonView" destination="uve-3a-EaF" id="dSn-1t-GEs"/>
                         <outlet property="palceholderImageView" destination="wp0-9s-Lcx" id="Iiq-p2-yFt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="374" y="33"/>
+        </scene>
+        <!--Album View Controller-->
+        <scene sceneID="LU0-FS-mfJ">
+            <objects>
+                <viewController id="eif-Rh-L6a" customClass="AlbumViewController" customModule="One_image_Viewer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cIc-qV-zWg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="4wP-q3-yP5"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vwf-J8-P6w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1039" y="33"/>
         </scene>
     </scenes>
 </document>
