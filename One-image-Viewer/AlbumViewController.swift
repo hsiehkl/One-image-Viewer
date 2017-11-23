@@ -17,11 +17,15 @@ class AlbumViewController: UIViewController {
         let view = self.storyboard?.instantiateViewController(withIdentifier: "ViewController")
         UIApplication.shared.keyWindow?.rootViewController = view
         
+//        view.selectedphoto = "02"
+        
     }
     @IBAction func button01(_ sender: Any) {
         
         let view = self.storyboard?.instantiateViewController(withIdentifier: "ViewController")
         UIApplication.shared.keyWindow?.rootViewController = view
+        
+//        view.selectedphoto = "01"
         
     }
     

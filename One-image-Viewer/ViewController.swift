@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController, UIScrollViewDelegate {
 
+    var selectedphoto = ""
+
     @IBOutlet weak var butoonView: UIView!
     var scrollView: UIScrollView!
     var imageView: UIImageView!
@@ -20,13 +22,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        let button = UIButton()
-//        button.setTitle("Pick an Image", for: .normal)
-//        button.setTitleColor(UIColor.white, for: .normal)
-//        button.backgroundColor = UIColor.black
         pickButton.frame = CGRect(x: 110, y: 670, width: 180, height: 44)
-//        scrollView.addSubview(button)
-
         
         //setup placeholder image
         palceholderImageView.image = UIImage(named: "icon_photo")?.withRenderingMode(.alwaysTemplate)
@@ -43,7 +39,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         scrollView.bounces = false
         
         scrollView.addSubview(imageView)
-//        scrollView.addSubview(butoonView)
+
         scrollView.addSubview(pickButton)
         
         view.addSubview(scrollView)
@@ -105,9 +101,9 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         // Dispose of any resources that can be recreated.
     }
 
-    func creatButton() {
-
-    }
+//    func selectedPhoto(selectedPhoto: string) {
+//
+//    }
 
 }
 
