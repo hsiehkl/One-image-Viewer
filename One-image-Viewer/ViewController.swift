@@ -13,10 +13,20 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var butoonView: UIView!
     var scrollView: UIScrollView!
     var imageView: UIImageView!
+    var button: UIButton!
     @IBOutlet weak var palceholderImageView: UIImageView!
     
+    @IBOutlet weak var pickButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        let button = UIButton()
+//        button.setTitle("Pick an Image", for: .normal)
+//        button.setTitleColor(UIColor.white, for: .normal)
+//        button.backgroundColor = UIColor.black
+        pickButton.frame = CGRect(x: 110, y: 670, width: 180, height: 44)
+//        scrollView.addSubview(button)
+
         
         //setup placeholder image
         palceholderImageView.image = UIImage(named: "icon_photo")?.withRenderingMode(.alwaysTemplate)
@@ -25,16 +35,19 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         
         scrollView = UIScrollView()
         scrollView.delegate = self
-        scrollView.frame = CGRect(x: 0, y: 0, width: 375, height: 100)
+//        scrollView.frame = CGRect(x: 0, y: 0, width: 375, height: 100)
         scrollView.contentSize = imageView.bounds.size
         
-        scrollView.minimumZoomScale = 0.0
+        scrollView.minimumZoomScale = 1.0
         scrollView.maximumZoomScale = 2.0
         scrollView.bounces = false
         
         scrollView.addSubview(imageView)
 //        scrollView.addSubview(butoonView)
+        scrollView.addSubview(pickButton)
+        
         view.addSubview(scrollView)
+        scrollView.isUserInteractionEnabled = true
         
     }
     
@@ -50,7 +63,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         }
 
         if contentsFrame.size.height < boundsSize.height {
-            contentsFrame.origin.y = ((boundsSize.height - 77.0) - contentsFrame.size.height) / 2
+            contentsFrame.origin.y = ((boundsSize.height) - contentsFrame.size.height) / 2
         }
         else {
             contentsFrame.origin.y = 0
@@ -92,6 +105,9 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         // Dispose of any resources that can be recreated.
     }
 
+    func creatButton() {
+
+    }
 
 }
 

@@ -8,8 +8,23 @@
 
 import UIKit
 
-class AlbumViewController: UIViewController {
 
+
+class AlbumViewController: UIViewController {
+    
+
+    @IBAction func button02(_ sender: Any) {
+        let view = self.storyboard?.instantiateViewController(withIdentifier: "ViewController")
+        UIApplication.shared.keyWindow?.rootViewController = view
+        
+    }
+    @IBAction func button01(_ sender: Any) {
+        
+        let view = self.storyboard?.instantiateViewController(withIdentifier: "ViewController")
+        UIApplication.shared.keyWindow?.rootViewController = view
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
